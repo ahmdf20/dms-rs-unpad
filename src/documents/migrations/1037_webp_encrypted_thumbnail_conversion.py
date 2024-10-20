@@ -23,7 +23,7 @@ def _do_convert(work_package):
     ) = work_package
 
     try:
-        gpg = gnupg.GPG(homedir="~/..gnupg")
+        gpg = gnupg.GPG(gnupghome=settings.GNUPG_HOME)
 
         logger.info(f"Decrypting thumbnail: {existing_encrypted_thumbnail}")
 
